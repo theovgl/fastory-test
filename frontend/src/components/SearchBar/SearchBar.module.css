@@ -1,5 +1,31 @@
 .searcBarInput {
-	margin: auto;
-	max-width: 600px;
-	width: 100%;
+	width: 500px;
+	padding: 10px 20px;
+	margin: 20px auto;
+	background-color: black;
+	border: #FFE81F 2px solid;
+	color: inherit;
+	border-radius: 20px;
+	font-family:'Courier New', Courier, monospace;
+	font-weight: 700;
+}
+
+.searcBarInput:focus {
+	outline: none;
+}
+
+h3 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	color: inherit
 }
