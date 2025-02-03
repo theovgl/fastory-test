@@ -1,0 +1,18 @@
+.searchCategory {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.searchCatergoy_title {
+	text-transform: capitalize;
+}
+
+.cardList {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	width: 100%;
+	padding: 0;
+}

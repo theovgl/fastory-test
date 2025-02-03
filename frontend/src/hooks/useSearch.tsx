@@ -9,7 +9,9 @@ export const useSearch = (query: string) => {
 
   useEffect(() => {
     const debounce = setTimeout(async () => {
-      if (query.trim()) {
+      if (query === "") {
+        setResults([]);
+      } else if (query.trim()) {
         setLoading(true);
         try {
           const data = await searchAPI(query);
