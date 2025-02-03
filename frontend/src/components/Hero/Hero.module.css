@@ -1,12 +1,12 @@
 .heroContainer {
-	display: flex;
-	justify-content: center;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .hero_title {
-	font-size: 2rem;
-	text-align: center;
-	text-decoration: none;
-	color: inherit
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
 }

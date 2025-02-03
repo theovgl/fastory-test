@@ -1,31 +1,31 @@
 .searcBarInput {
-	width: 500px;
-	padding: 10px 20px;
-	margin: 20px auto;
-	background-color: black;
-	border: #FFE81F 2px solid;
-	color: inherit;
-	border-radius: 20px;
-	font-family:'Courier New', Courier, monospace;
-	font-weight: 700;
+  width: 500px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: black;
+  border: #ffe81f 2px solid;
+  color: inherit;
+  border-radius: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
 }
 
 .searcBarInput:focus {
-	outline: none;
+  outline: none;
 }
 
 h3 {
-	text-align: center;
-	text-decoration: underline;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .links {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
-	text-decoration: none;
-	color: inherit
+  text-decoration: none;
+  color: inherit;
 }

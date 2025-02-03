@@ -24,7 +24,7 @@ main {
 }
 
 .crawl {
-position: relative;
+  position: relative;
   top: 100px;
 
   height: 350%;

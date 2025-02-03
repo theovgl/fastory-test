@@ -1,8 +1,8 @@
 .page_content {
-	height: 100%;
-	width: 100%;
-	max-width: 600px;
-	margin: auto;
-	font-family: 'Courier New', Courier, monospace;
-	font-weight: 700;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
 }
