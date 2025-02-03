@@ -1,8 +1,9 @@
 import Hapi from '@hapi/hapi';
+import { SWAPIResponse } from './types/response';
 
 const init = async () => {
   const server = Hapi.server({
-    port: 3000,
+    port: 3001,
     host: 'localhost',
   });
 
@@ -38,11 +39,35 @@ const init = async () => {
             const response = await fetch(
               `https://swapi.dev/api/${category}/?search=${query}`,
             );
-            return response.json();
+
+            const data = (await response.json()) as Partial<SWAPIResponse>;
+
+            data.category = category;
+
+            return data;
           }),
         );
 
         return h.response(results).code(200);
+      } catch (error) {
+        console.error(error);
+        return h.response({ error: 'An error occurred' }).code(500);
+      }
+    },
+  });
+
+  server.route({
+    method: 'GET',
+    path: '/{category}/{id}',
+    handler: async (request, h) => {
+      const { category, id } = request.params;
+
+      try {
+        const response = await fetch(
+          `https://swapi.dev/api/${category}/${id}/`,
+        );
+
+        return await response.json();
       } catch (error) {
         console.error(error);
         return h.response({ error: 'An error occurred' }).code(500);
