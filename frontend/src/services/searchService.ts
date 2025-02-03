@@ -3,7 +3,7 @@ import { SWAPIResponse } from "../types/response";
 export async function searchAPI(query: string) {
   try {
     const response = await fetch(
-      `http://localhost:3001/search?query=${query}`,
+      `${import.meta.env.VITE_API_URL}/search?query=${query}`,
       {
         method: "GET",
       },

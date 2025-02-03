@@ -10,7 +10,7 @@ export default function FilmDetails() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/films/${params.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/films/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data);

@@ -10,7 +10,7 @@ export default function StarshipsDetails() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/starships/${params.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/starships/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data);

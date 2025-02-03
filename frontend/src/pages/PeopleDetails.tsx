@@ -10,7 +10,7 @@ export default function PeopleDetails() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/people/${params.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/people/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data);

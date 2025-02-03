@@ -10,7 +10,7 @@ export default function VehicleDetails() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/vehicles/${params.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/vehicles/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data);

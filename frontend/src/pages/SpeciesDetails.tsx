@@ -10,7 +10,7 @@ export default function SpeciesDetails() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/species/${params.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/species/${params.id}`)
       .then((response) => response.json())
       .then((data) => {
         setData(data);
