@@ -22,12 +22,29 @@ export default function FilmDetails() {
       });
   }, [params.id]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error.message}</p>;
-  if (!data) return <p>Film not found</p>;
+  if (loading)
+    return (
+      <div className={styles.page_content}>
+        <p>Loading...</p>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className={styles.page_content}>
+        <p>{error.message}</p>
+      </div>
+    );
+
+  if (!data)
+    return (
+      <div className={styles.page_content}>
+        <p>People not found</p>
+      </div>
+    );
 
   return (
-    <div>
+    <div className={styles.page_content}>
       <h2 className={styles.details_title}>{data.title}</h2>
       <p>Episode ID: {data.episode_id}</p>
       <p>Director: {data.director}</p>
