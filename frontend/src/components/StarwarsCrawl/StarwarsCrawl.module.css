@@ -1,0 +1,31 @@
+main {
+  height: 100%;
+}
+
+.crawl_container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: scroll;
+  transform-origin: 50% 0%;
+  transform: perspective(300px) rotateX(30deg);
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.crawl_container::-webkit-scrollbar {
+  display: none;
+}
+
+.crawl {
+position: relative;
+  top: 100px;
+
+  height: 350%;
+}
