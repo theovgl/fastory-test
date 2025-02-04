@@ -45,17 +45,21 @@ export default function SearchBar() {
       <StarwarsCrawl>
         {results.map((result) => (
           <>
-            <h3>{result.category}</h3>
-            <div className={styles.links}>
-              {result.results.map((item) => (
-                <Link
-                  className={styles.link}
-                  to={`/${result.category}/${getItemId(item)}`}
-                >
-                  {getName(item)}
-                </Link>
-              ))}
-            </div>
+            {result.results.length > 0 && (
+              <>
+                <h3>{result.category}</h3>
+                <div className={styles.links}>
+                  {result.results.map((item) => (
+                    <Link
+                      className={styles.link}
+                      to={`/${result.category}/${getItemId(item)}`}
+                    >
+                      {getName(item)}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
           </>
         ))}
       </StarwarsCrawl>
